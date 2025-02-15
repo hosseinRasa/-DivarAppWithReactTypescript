@@ -1,12 +1,16 @@
-import { useState } from "react"
+import { ReactNode } from "react"
 import './Counter.css'
-const Counter = () => {
-    const [count, setCount] = useState<number>(1)
+type CounterProps = {
+    setCount: React.Dispatch<React.SetStateAction<number>>,
+    children: ReactNode,
+}
+const Counter = ({ setCount, children } : CounterProps) => {
+    // const [count, setCount] = useState<number>(1)
   return (
     <article>
-        <h2>
-            Count is : {count}
-        </h2>
+        
+           {children}
+        
         <div id="buttonGroup">
 
         <button id="plus-counter" onClick={() => {setCount(count => ++count )}}>

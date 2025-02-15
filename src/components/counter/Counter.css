@@ -1,6 +1,10 @@
 article{
     display: grid;
     color: aliceblue;
+    /* gap: 10px; */
+    /* flex-flow: column;
+    align-items: center; */
+    place-items: center center;
 }
 
 div#buttonGroup{
